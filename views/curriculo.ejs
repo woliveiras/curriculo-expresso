@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/styles/main.css' />
+  </head>
+  <body>
+    <main>
+      <h1><%= title %></h1>
+      <p>Bem vindo(a) ao currículum do <strong><%= name %></strong></p>
+      <p>> <%= profession %></p>
+      <p><%= description %></p>
+      <div>
+        <strong>Experiência</strong>
+        <ul>
+            <% experience.map(experience => { %>
+                <li>
+                    <div>
+                        <strong><%= experience.company %>:</strong>
+                        <strong><%= experience.office %></strong>
+                        <br>
+                        <span><%= experience.description %></span>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+      </div>
+      <div>
+        <strong>Educação</strong>
+        <ul>
+            <% education.map(education => { %>
+                <li>
+                    <div>
+                        <strong><%= education.institution %></strong>
+                        <br>
+                        <span><%= education.description %></span>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+      </div>
+      <div>
+        <strong>Skills</strong>
+        <ul>
+            <% skills.map(skill => { %>
+                <li><%= skill %></li>
+            <% }); %>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "curriculo-expresso",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node_modules/nodemon/bin/nodemon.js app"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "http-errors": "^1.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
