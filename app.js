@@ -1,24 +1,21 @@
 const express = require('express');
-const createError = require('http-errors');
-const path = require('path');
 const port = 3000;
+const path = require('path');
+const createError = require('http-errors');
+
+const indexRoute = require('./routes/index');
+const curriculoRoute = require('./routes/curriculo');
 
 const app = express();
 
-// Routes
-
-const  indexRouter = require('./routes/index');
-const  curriculoRouter = require('./routes/curriculo');
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Setup view engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/', indexRouter);
-
-app.use('/curriculo', curriculoRouter)
+app.get('/', indexRoute);
+app.get('/curriculo', curriculoRoute);
 
 // 404
 app.use((req, res, next) => {
@@ -37,3 +34,4 @@ app.use((err, req, res, next) => {
 app.listen(port, err => {
     console.log(`Server is listening on ${port}`);
 });
+``

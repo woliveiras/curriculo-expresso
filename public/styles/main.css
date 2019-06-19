@@ -1,9 +1,9 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+    line-height: 2;
 }
 
-main {
-  max-width: 760px;
-  margin: 0 auto;
-  font-size: 2em
+main, footer {
+    max-width: 960px;
+    margin: 0 auto;
 }
